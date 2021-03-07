@@ -9,18 +9,18 @@ part of 'home_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeController on _HomeControllerBase, Store {
-  final _$valueAtom = Atom(name: '_HomeControllerBase.value');
+  final _$isNavbarAtom = Atom(name: '_HomeControllerBase.isNavbar');
 
   @override
-  int get value {
-    _$valueAtom.reportRead();
-    return super.value;
+  bool get isNavbar {
+    _$isNavbarAtom.reportRead();
+    return super.isNavbar;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.reportWrite(value, super.value, () {
-      super.value = value;
+  set isNavbar(bool value) {
+    _$isNavbarAtom.reportWrite(value, super.isNavbar, () {
+      super.isNavbar = value;
     });
   }
 
@@ -28,11 +28,11 @@ mixin _$HomeController on _HomeControllerBase, Store {
       ActionController(name: '_HomeControllerBase');
 
   @override
-  void increment() {
+  void changeIsNavbar() {
     final _$actionInfo = _$_HomeControllerBaseActionController.startAction(
-        name: '_HomeControllerBase.increment');
+        name: '_HomeControllerBase.changeIsNavbar');
     try {
-      return super.increment();
+      return super.changeIsNavbar();
     } finally {
       _$_HomeControllerBaseActionController.endAction(_$actionInfo);
     }
@@ -41,7 +41,7 @@ mixin _$HomeController on _HomeControllerBase, Store {
   @override
   String toString() {
     return '''
-value: ${value}
+isNavbar: ${isNavbar}
     ''';
   }
 }

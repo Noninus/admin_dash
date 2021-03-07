@@ -8,10 +8,10 @@ class HomeController = _HomeControllerBase with _$HomeController;
 
 abstract class _HomeControllerBase with Store {
   @observable
-  int value = 0;
+  bool isNavbar = true;
 
   @action
-  void increment() {
-    value++;
+  void changeIsNavbar() {
+    isNavbar = !isNavbar;
   }
 }

@@ -75,7 +75,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
   }
 
   _entrar() {
-    Modular.to.pushReplacementNamed('dashboard');
+    Modular.to.pushReplacementNamed('home');
   }
 
   @override

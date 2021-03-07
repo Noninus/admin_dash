@@ -16,7 +16,7 @@ class AppModule extends MainModule {
 
   @override
   List<ModularRouter> get routers => [
-        ModularRouter('/dashboard', module: HomeModule()),
+        ModularRouter('/home', module: HomeModule()),
         ModularRouter('/login',
             module: LoginModule(),
             guards: [UserLoggedInGuard(userIsLoggedIn: false)]),
