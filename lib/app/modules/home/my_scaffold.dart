@@ -3,17 +3,17 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'home_controller.dart';
 
-class HomePage extends StatefulWidget {
+class MyScaffold extends StatefulWidget {
   final String title;
   final Widget body;
-  const HomePage({Key key, this.title = "Dashboard", this.body})
+  const MyScaffold({Key key, this.title = "Dashboard", this.body})
       : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _MyScaffoldState createState() => _MyScaffoldState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeController> {
+class _MyScaffoldState extends ModularState<MyScaffold, HomeController> {
   //use 'controller' variable to access controller
 
   @override
@@ -47,7 +47,8 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                       ListTile(
                         leading: Icon(Icons.dashboard),
                         title: Text("Dashboard"),
-                        onTap: () => Modular.to.pushReplacementNamed('/home'),
+                        onTap: () =>
+                            Modular.to.pushReplacementNamed('/home/dashboard'),
                       ),
                       ListTile(
                         leading: Icon(Icons.bar_chart),

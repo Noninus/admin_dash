@@ -1,4 +1,4 @@
-import 'package:admin_dash/app/modules/home/home_page.dart';
+import 'package:admin_dash/app/modules/home/my_scaffold.dart';
 import 'package:admin_dash/app/modules/relatorios/relatorios_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -18,7 +18,7 @@ class _RelatoriosPageState
 
   @override
   Widget build(BuildContext context) {
-    return HomePage(
+    return MyScaffold(
         body: Column(
       children: [
         Observer(builder: (_) {
