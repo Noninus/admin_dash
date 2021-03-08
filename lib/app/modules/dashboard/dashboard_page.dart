@@ -1,3 +1,4 @@
+import 'package:admin_dash/app/modules/dashboard/components/dashboard_card.dart';
 import 'package:admin_dash/app/modules/dashboard/dashboard_controller.dart';
 import 'package:admin_dash/app/modules/home/my_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -19,45 +20,41 @@ class _DashboardPageState
   Widget build(BuildContext context) {
     return MyScaffold(
         body: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
+        Text(
+          "Dashboard",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+        ),
+        Container(
           child: Row(
             children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
+              DashboardCard(
                   color: Colors.red,
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
+                  icon: Icons.person,
+                  label: "Vendas",
+                  value: 'R\$ 1454,50'),
+              DashboardCard(
                   color: Colors.yellow,
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
+                  icon: Icons.person,
+                  label: "Pessoas",
+                  value: 121),
+              DashboardCard(
                   color: Colors.green,
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  color: Colors.black,
-                ),
-              )
+                  icon: Icons.person,
+                  label: "Qtd",
+                  value: 443),
+              DashboardCard(
+                  color: Colors.blue,
+                  icon: Icons.person,
+                  label: "Ticket Médio",
+                  value: 'R\$ 14,50'),
             ],
           ),
         ),
-        Expanded(
-          child: Container(
-            color: Colors.blue,
-          ),
+        Container(
+          color: Colors.blue,
         ),
-        Expanded(
-          child: Container(),
-        )
       ],
     ));
   }

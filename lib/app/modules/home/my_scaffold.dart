@@ -1,3 +1,4 @@
+import 'package:admin_dash/app/modules/home/components/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -28,42 +29,23 @@ class _MyScaffoldState extends ModularState<MyScaffold, HomeController> {
         actions: [
           IconButton(
               icon: Icon(Icons.person),
-              onPressed: () => print('open profile page'))
+              onPressed: () => Modular.to.pushReplacementNamed("/home/perfil"))
         ],
       ),
       body: Row(
         children: [
           Observer(builder: (_) {
             if (controller.isNavbar) {
-              return Container(
-                  width: 250,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[100],
-                    border: Border(
-                        right: BorderSide(color: Colors.grey, width: 1.0)),
-                  ),
-                  child: Column(
-                    children: [
-                      ListTile(
-                        leading: Icon(Icons.dashboard),
-                        title: Text("Dashboard"),
-                        onTap: () =>
-                            Modular.to.pushReplacementNamed('/home/dashboard'),
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.bar_chart),
-                        title: Text("Relátorios"),
-                        onTap: () => Modular.to.pushReplacementNamed(
-                          '/home/relatorios',
-                        ),
-                      )
-                    ],
-                  ));
+              return Navbar();
             } else {
               return Container();
             }
           }),
-          Expanded(child: widget.body),
+          Expanded(
+              child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: widget.body,
+          )),
         ],
       ),
     );

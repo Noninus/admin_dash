@@ -1,4 +1,5 @@
 import 'package:admin_dash/app/modules/dashboard/dashboard_module.dart';
+import 'package:admin_dash/app/modules/perfil/perfil_module.dart';
 import 'package:admin_dash/app/modules/relatorios/relatorios_module.dart';
 
 import 'home_controller.dart';
@@ -14,6 +15,7 @@ class HomeModule extends ChildModule {
   List<ModularRouter> get routers => [
         ModularRouter('/dashboard', module: DashboardModule()),
         ModularRouter('/relatorios', module: RelatoriosModule()),
+        ModularRouter('/perfil', module: PerfilModule()),
       ];
 
   static Inject get to => Inject<HomeModule>.of();

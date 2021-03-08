@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -9,6 +10,9 @@ class AppWidget extends StatelessWidget {
       title: 'Admin Dash',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.montserratTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       initialRoute: Modular.initialRoute,
       onGenerateRoute: Modular.generateRoute,
