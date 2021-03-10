@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'loading_controller.dart';
 
@@ -15,13 +16,13 @@ class _LoadingPageState extends ModularState<LoadingPage, LoadingController> {
 
   @override
   void initState() {
-    // SchedulerBinding.instance.addPostFrameCallback((_) {
-    //   print(Modular.to.path);
-    //   if (Modular.to.path != '/login') {
-    //     print('pushed');
-    //     Modular.to.pushReplacementNamed('/login');
-    //   }
-    // });
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      print(Modular.to.path);
+      if (Modular.to.path != '/login') {
+        print('pushed');
+        Modular.to.pushReplacementNamed('/login');
+      }
+    });
     super.initState();
   }
 
@@ -34,12 +35,12 @@ class _LoadingPageState extends ModularState<LoadingPage, LoadingController> {
           Center(
             child: CircularProgressIndicator(),
           ),
-          ElevatedButton(
-              onPressed: () => Modular.to.pushNamedAndRemoveUntil(
-                    '/login',
-                    ModalRoute.withName('/login'),
-                  ),
-              child: Text('aaa'))
+          // ElevatedButton(
+          //     onPressed: () => Modular.to.pushNamedAndRemoveUntil(
+          //           '/login',
+          //           ModalRoute.withName('/login'),
+          //         ),
+          //     child: Text('aaa'))
         ],
       ),
     );

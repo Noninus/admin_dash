@@ -36,6 +36,7 @@ dependencies:
   dio: ^3.0.10
   google_fonts: any
   flutter_mobx: ^1.1.0+2
+  another_flushbar: ^1.10.14
   mobx: ^1.2.1+4
   flutter_modular: ^2.0.1
   flutter:
