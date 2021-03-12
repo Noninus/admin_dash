@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class DashboardCard extends StatelessWidget {
   DashboardCard(
-      {@required this.color,
-      @required this.icon,
-      @required this.label,
-      @required this.value});
+      {required this.color,
+      required this.icon,
+      required this.label,
+      required this.value});
   final Color color;
   final IconData icon;
   final String label;

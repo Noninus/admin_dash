@@ -7,7 +7,7 @@ import 'home_controller.dart';
 class MyScaffold extends StatefulWidget {
   final String title;
   final Widget body;
-  const MyScaffold({Key key, this.title = "Dashboard", this.body})
+  const MyScaffold({Key? key, this.title = "Dashboard", required this.body})
       : super(key: key);
 
   @override

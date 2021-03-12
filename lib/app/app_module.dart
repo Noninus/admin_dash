@@ -32,7 +32,7 @@ class AppModule extends MainModule {
 class UserLoggedInGuard implements RouteGuard {
   final bool userIsLoggedIn;
 
-  const UserLoggedInGuard({this.userIsLoggedIn});
+  const UserLoggedInGuard({required this.userIsLoggedIn});
 
   @override
   bool canActivate(String url) {
@@ -52,16 +52,16 @@ class UserLoggedInGuard implements RouteGuard {
 class LoginExecutor extends GuardExecutor {
   final bool userIsLoggedIn;
 
-  LoginExecutor({this.userIsLoggedIn});
+  LoginExecutor({required this.userIsLoggedIn});
 
   @override
-  onGuarded(String path, {bool isActive}) {
+  onGuarded(String path, {required bool isActive}) {
     if (userIsLoggedIn) {
       return;
     }
 
     if (path != Modular.initialRoute && path != '/login') {
-      SchedulerBinding.instance.addPostFrameCallback((_) {
+      SchedulerBinding.instance!.addPostFrameCallback((_) {
         Modular.to.pushReplacementNamed(Modular.initialRoute);
       });
     }

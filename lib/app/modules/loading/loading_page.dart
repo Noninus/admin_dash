@@ -5,7 +5,7 @@ import 'loading_controller.dart';
 
 class LoadingPage extends StatefulWidget {
   final String title;
-  const LoadingPage({Key key, this.title = "Loading"}) : super(key: key);
+  const LoadingPage({Key? key, this.title = "Loading"}) : super(key: key);
 
   @override
   _LoadingPageState createState() => _LoadingPageState();
@@ -16,7 +16,7 @@ class _LoadingPageState extends ModularState<LoadingPage, LoadingController> {
 
   @override
   void initState() {
-    SchedulerBinding.instance.addPostFrameCallback((_) {
+    SchedulerBinding.instance!.addPostFrameCallback((_) {
       print(Modular.to.path);
       if (Modular.to.path != '/login') {
         print('pushed');
