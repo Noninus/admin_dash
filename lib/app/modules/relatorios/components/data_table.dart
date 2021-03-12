@@ -14,10 +14,9 @@ class MyDataTableSource extends DataTableSource {
     return DataRow.byIndex(
       index: index,
       cells: [
-        DataCell(Text('${data[index].codigo}')),
+        DataCell(Text('${data[index].id}')),
         DataCell(Text('${data[index].nome}')),
         DataCell(Text('${data[index].email}')),
-        DataCell(Text('${data[index].endereco}')),
         DataCell(Text('${data[index].telefone}')),
         DataCell(Row(
           children: [
@@ -31,12 +30,12 @@ class MyDataTableSource extends DataTableSource {
                     context: context,
                     builder: (_) {
                       return AlertDialog(
-                          title: Text("Deseja Excluir ?"),
+                          title: Text("Deseja Remover esse cliente?"),
                           content: Container(
                             height: 70,
                             child: Column(
                               children: [
-                                Text("Confirme para Excluir o usuario"),
+                                Text("Confirme a exclusão do cliente"),
                                 SizedBox(
                                   height: 20,
                                 ),

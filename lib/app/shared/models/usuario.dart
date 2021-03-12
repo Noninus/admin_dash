@@ -1,8 +1,7 @@
 class Usuario {
-  Usuario({this.codigo, this.nome, this.email, this.telefone, this.endereco});
-  final int? codigo;
+  Usuario({this.id, this.nome, this.email, this.telefone});
+  final int? id;
   final String? nome;
   final String? email;
   final String? telefone;
-  final String? endereco;
 }
