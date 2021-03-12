@@ -3,7 +3,8 @@ import 'package:admin_dash/app/modules/dashboard/dashboard_controller.dart';
 import 'package:admin_dash/app/modules/home/my_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
+
+import 'components/simple_area_chart.dart';
 
 class DashboardPage extends StatefulWidget {
   final String title;
@@ -54,35 +55,8 @@ class _DashboardPageState
           ),
         ),
         SizedBox(height: 25),
-        SelectableText(
-          "Gráfico de vendas",
-          style: TextStyle(fontSize: 22),
-        ),
-        SizedBox(height: 15),
-        SfCartesianChart(
-            primaryXAxis: CategoryAxis(),
-            series: <LineSeries<SalesData, String>>[
-              LineSeries<SalesData, String>(
-                  dataSource: <SalesData>[
-                    SalesData('Jan', 0),
-                    SalesData('Fev', 166),
-                    SalesData('Mar', 34),
-                    SalesData('Abr', 125),
-                    SalesData('Mai', 300),
-                    SalesData('Jun', 35),
-                    SalesData('Jul', 208),
-                  ],
-                  xValueMapper: (SalesData sales, _) => sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales)
-            ])
+        Expanded(child: SimpleAreaChart())
       ],
     ));
   }
-}
-
-class SalesData {
-  final String year;
-  final int sales;
-
-  SalesData(this.year, this.sales);
 }
