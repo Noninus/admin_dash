@@ -36,7 +36,7 @@ class _MyScaffoldState extends ModularState<MyScaffold, HomeController> {
         children: [
           Observer(builder: (_) {
             if (controller.isNavbar) {
-              return Navbar();
+              return Navbar(controller: controller);
             } else {
               return Container();
             }

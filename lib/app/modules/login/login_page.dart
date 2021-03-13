@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'login_controller.dart';
@@ -14,7 +16,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
   //use 'controller' variable to access controller
   final _formKey = GlobalKey<FormState>();
 
-  _leftScreen() {
+  _leftScreen(bool isCellphone) {
+    if (isCellphone) return Container();
     return Expanded(
       flex: 2,
       child: Container(
@@ -80,10 +83,11 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Row(
         children: <Widget>[
-          _leftScreen(),
+          _leftScreen(width < 750 ? true : false),
           _rightScreen(),
         ],
       ),
