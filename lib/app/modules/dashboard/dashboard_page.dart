@@ -55,7 +55,6 @@ class _DashboardPageState
         ),
         LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
-            print(constraints.minWidth);
             if (constraints.minWidth > 750) {
               return Row(
                 children: [
