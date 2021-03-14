@@ -1,17 +1,26 @@
-# admin_dash
+# Admin Template
 
-A new Flutter project. Created by Slidy
+Multi platform admin tempalte using Flutter 2.0
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+Is required to use Flutter in stable branch.
 
-A few resources to get you started if this is your first Flutter project:
+## License
+[MIT](LICENSE)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# admin_dash" 
+## Author
+
+Rafael Nonino Filho
+
+* Email: rafinha.nonino7@gmail.com
+
+* GitHub: [https://github.com/Noninus/](https://github.com/Noninus/)
+
+* Instagram profissional: [https://www.instagram.com/rafanonino.dev/](https://www.instagram.com/rafanonino.dev/)
+
+---
+#### Technologies:
+
+[![Flutter](https://lh3.googleusercontent.com/proxy/Qv3tB5AB3EyJ4-FOsBXUfq-ss-fWGzLPD-T2DIjp_aEnU1_2RHWq71GvkwpHmm5vPAeaQ91wvsgmBCQoK_kJmKKnbUvYS0OmQ5NRrs6pYqNbc-vsweRUpxuT3lKuORiSyikOVsvA8VkuT_PXTX4P)](hthttps://flutter.dev/)
